@@ -50,6 +50,7 @@ public class locators2 {
 		System.out.println(w.size());
 		List<WebElement> w1 = driver.findElements(By.tagName("button"));
 		System.out.println(w1.size());
+		System.out.println(driver.getTitle());
 		
 		
 

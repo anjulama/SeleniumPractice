@@ -9,30 +9,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
-public class WebDriveMethod {
+public class LinksOnthePage {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", 
 				"C:\\Users\\Anju Lama\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
-	
-		driver.get("https://www.google.com/");
+		driver.get("https://www.webdriveruniversity.com/");
 		driver.manage().window().maximize();
-		driver.navigate().to("https://www.selenium.dev/");
-		String title = driver.getTitle();
-		System.out.println(title);
-		 
-		String url =driver.getCurrentUrl();
-		System.out.println(url);
-		
-		String pageSource= driver.getPageSource();
-		System.out.println(pageSource);
-		
-	    List<WebElement> r= driver.findElements(By.tagName("span"));
-		System.out.println(r.size());
-		//driver.quit();
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println("Total no. of links" +":" + links.size());
+		for (int i=0; i < links.size(); i++) {
+			System.out.println(links.get(i).getAttribute("href"));
+			//System.out.println(links.get(i).getText());
+		}
 		
 		
 	}

@@ -31,7 +31,7 @@ public class WebElements {
 		String s4 = driver.findElement(By.cssSelector("a[title=\"Women\"]")).getCssValue("color");
 		System.out.println(s4);
 		
-		driver.close();
+		//driver.close();
 
 		
 		
