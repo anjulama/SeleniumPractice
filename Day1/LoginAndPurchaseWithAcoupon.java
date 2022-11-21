@@ -15,7 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginAndPurchaseWithAcoupon {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Anju Lama\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
@@ -39,7 +38,6 @@ public class LoginAndPurchaseWithAcoupon {
 		driver.findElement(By.xpath("//*[contains(text(),'Add to Cart')]")).click();
 		driver.findElement(By.linkText("Checkout")).click();
 
-
 		driver.findElement(By.xpath("//*[contains(text(),'Add Code ')]")).click();
 		driver.findElement(By.cssSelector("[placeholder=\"Enter Code\"]")).sendKeys("1TIMEONLY");
 		driver.findElement(By.id("save-button")).click();
@@ -51,7 +49,7 @@ public class LoginAndPurchaseWithAcoupon {
 		driver.findElement(By.className("webstore-checkout-btn")).click();
 		driver.findElement(By.xpath("//a[contains(@aria-label, 'Account')]")).click();
 		driver.findElement(By.cssSelector("[class=\"main-sub red\"]")).click();
-		
+
 		driver.quit();
 
 	}
